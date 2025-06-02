@@ -1,0 +1,23 @@
+{
+  "name": "jsutil",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/2192947642/JsUtil#readme",
+  "bugs": {
+    "url": "https://github.com/2192947642/JsUtil/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2192947642/JsUtil.git"
+  },
+  "license": "ISC",
+  "author": "罗广展",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
