@@ -28,10 +28,10 @@ class Backtrack {
     let records = Record.buildRecords(value, keys);
     this.#recordsMap.set(value, records);
   }
-  static recordAll(value:any){
-    this.record(value,Object.keys(value))
+  static recordAll<T extends object>(value:T){
+    this.record(value,Object.keys(value) as any)
   }
-  static backtrack(value: any) {
+  static backtrack<T extends object>(value: T) {
     let records = this.#recordsMap.get(value);
     if (records != null && value != null) {
       records.forEach((item) => {
@@ -39,12 +39,12 @@ class Backtrack {
       });
     }
   }
-  static backtrackAndRemove(value: any) {
+  static backtrackAndRemove<T extends object>(value: T) {
     this.backtrack(value);
     this.remove(value);
   }
 
-  static remove(value: any) {
+  static remove<T extends object>(value: T) {
     this.#recordsMap.delete(value);
   }
 }
